@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- used linearlayout -> easy to arrange the elements vertically and make the space between them -->
+    <LinearLayout
+        android:id="@+id/instructions_screen"
+        style="@style/fragment_linear_layout">
+
+            <TextView
+                android:id="@+id/text_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/instructions"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                style="@style/welcome_style" />
+
+            <TextView
+                android:id="@+id/text_instructions_info"
+                style="@style/welcome_style"
+                android:padding="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="@string/instructions_info_str"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/instructions_screen_btn"
+                android:text="@string/next"
+                style="@style/next_btn_style"
+                android:layout_marginTop="100dp"/>
+        </LinearLayout>
+
+</layout>

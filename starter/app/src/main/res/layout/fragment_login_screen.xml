@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- used linearlayout -> easy to arrange the elements vertically and make the space between them -->
+    <LinearLayout
+        android:id="@+id/login_screen"
+        style="@style/fragment_linear_layout">
+
+        <TextView
+            android:id="@+id/text_password"
+            android:text="@string/password"
+            style="@style/label_login" />
+
+        <EditText
+            android:id="@+id/editText_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_marginBottom="100dp"/>
+
+
+        <TextView
+            android:id="@+id/text_email"
+            style="@style/label_login"
+            android:text="@string/email"/>
+
+        <EditText
+            android:id="@+id/editText_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="100dp"/>
+
+        <Button
+            android:id="@+id/new_login_btn"
+            style="@style/button_login"
+            android:text="@string/new_login"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/exist_login_btn"
+            android:text="@string/login_with_existing_account"
+            style="@style/button_login" />
+    </LinearLayout>
+
+</layout>

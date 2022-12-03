@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.udacity.shoestore.DoubleConverter" />
+        <variable
+            name="shoeModel"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <!-- used linearlayout -> easy to arrange the elements vertically and make the space between them -->
+    <LinearLayout
+        android:id="@+id/shoe_detail_screen"
+        style="@style/fragment_linear_layout">
+
+            <TextView
+                android:id="@+id/text_shoe_name"
+                android:text="@string/shoe_name"
+                style="@style/label_login" />
+
+            <EditText
+                android:id="@+id/edit_text_shoe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={shoeModel.name}"/>
+
+
+            <TextView
+                android:id="@+id/text_company_name"
+                android:text="@string/company"
+                style="@style/label_login" />
+
+            <EditText
+                android:id="@+id/edit_text_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={shoeModel.company}"
+                android:layout_marginBottom="25dp"/>
+
+            <TextView
+                android:id="@+id/text_shoe_size"
+                android:text="@string/shoe_size"
+                style="@style/label_login" />
+
+            <EditText
+                android:id="@+id/edit_text_shoe_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@={DoubleConverter.doubleToString(shoeModel.size)}"
+                android:layout_marginBottom="25dp"/>
+
+
+            <TextView
+                android:id="@+id/text_shoe_description"
+                android:text="@string/shoe_description"
+                style="@style/label_login" />
+
+            <EditText
+                android:id="@+id/edit_text_shoe_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={shoeModel.description}"
+                android:layout_marginBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/shoe_detail_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_1"
+
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:cropToPadding="true"
+            />
+
+
+        <Button
+            android:id="@+id/upload_btn"
+            android:text="@string/upload_image"
+            style="@style/button_login"
+            android:textStyle="bold"
+            android:backgroundTint="#EC5F5F"
+            android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/save_btn"
+                style="@style/button_login"
+
+                android:text="@string/save" />
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:text="@string/cancel"
+                style="@style/button_login" />
+
+        </LinearLayout>
+
+</layout>
+
+<!--    android:src="@={shoeModel.images, default=@drawable/img_1 }"-->

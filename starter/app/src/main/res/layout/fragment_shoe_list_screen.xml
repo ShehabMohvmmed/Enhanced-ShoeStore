@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <!-- used scrollview -> to scroll the screen when having more than on element on top of each
+        other and the screen can't fit them all so we move them down and make the screen scrollable-->
+    <!-- used relativelayout -> to contain the scrollview , the linear layout and the fab
+ so that i can make it fixed in the bottom corner along the screen even when scrolling -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BFE1C2">
+
+        <!-- used scrollview -> to scroll the screen when having more than on element on top of each
+        other and the screen can't fit them all so we move them down and make the screen scrollable-->
+
+            <!-- used linearlayout -> easy to arrange the elements vertically and make the space between them -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+
+            android:src="@drawable/ic_add"
+            android:layout_margin="16dp" />
+
+    </RelativeLayout>
+
+
+
+</layout>
+
+
+
+
+
+
